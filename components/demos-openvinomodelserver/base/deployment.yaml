@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: demos-openvinomodelserver
     spec:
       containers:
-      - image: python-image:latest
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/openvino/demos-openvinomodelserver@sha256:efd6029b71952bb08d0e39de4a1b31db9a267d20dfbc8c1c5ec54e692d91ff09
         name: my-python
         ports:
         - containerPort: 8081
