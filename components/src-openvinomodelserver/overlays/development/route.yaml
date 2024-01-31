@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: src-openvinomodelserver
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: src-openvinomodelserver
+    app.kubernetes.io/part-of: openvino
+  name: src-openvinomodelserverikst
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: src-openvinomodelserver
+    weight: null
+status: {}
