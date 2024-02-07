@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: openvino
   name: openvino-model-server
 spec:
-  replicas: 1
+  replicas: 0
   revisionHistoryLimit: 0
   selector:
     matchLabels:
@@ -31,5 +31,5 @@ spec:
         resources:
           requests:
             cpu: 10m
-            memory: 256Mi
+            memory: 10Mi
 status: {}
